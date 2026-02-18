@@ -1,11 +1,33 @@
-> Entities are not to be multiplied without necessity
+# PSD Razor (macOS GUI)
+PSD Razor is a native macOS application designed to give a friendly face to the powerful psd_ockham command-line utility. It allows graphic designers and artists to drastically reduce Photoshop file sizes without ever needing to open the Terminal.
 
-_Ockham's razor_
+## Key Features
 
-----
+- Drag & Drop Interface: Simply drag your .psd or .psb files directly onto the app window.
+- Batch Processing: Supports dropping multiple files at once to process them in a queue.
+- Automated Permissions: Automatically handles macOS security hurdles (like chmod +x and removing quarantine attributes) so the script runs instantly without "Permission Denied" errors.
+- Real-Time Feedback: Features a built-in console window so you can see the reduction progress and results live.
+- Native Performance: Built with Swift and SwiftUI for a lightweight, responsive experience on Apple Silicon and Intel Macs.
 
-![Icon](src-gui/mac/res/Images.xcassets/AppIcon.appiconset/ico_128.png)
+## How to Use
 
+1. Launch PSD Razor
+2. Drag one or more Photoshop files onto the drop zone.
+3. Click "Reduce File Size".
+
+[!NOTE]
+If you see a "Permission Denied" or "Unidentified Developer" error:
+1. Open System Settings (or System Preferences).
+2. Go to Privacy & Security.
+3. Scroll down to the Security section.
+4. Click Open Anyway next to the app name.
+5. Enter your password to confirm and launch the app.
+
+The app will generate a smaller version of your file (suffixed with _cut) in the same folder.
+
+---
+
+## Original psd_ockham Documentation
 **psd_ockham** is a command-line utility that reduces Photoshop .psd and .psb file size by removing parts of excessive XMP metadata.
 
 Latter versions of Photoshop have issue when XMP gets bloated with numerous identifiers in the `<photoshop:DocumentAncestors>` element (https://forums.adobe.com/thread/1983397). These tags doesn't contain any useful information and can be safely removed. Sometimes psd files get extremely large and the size of bloated metadata exceeds the size of the rest of the file multiple times.
