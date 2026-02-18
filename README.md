@@ -15,15 +15,15 @@ PSD Razor is a native macOS application designed to give a friendly face to the 
 2. Drag one or more Photoshop files onto the drop zone.
 3. Click "Reduce File Size".
 
->[!NOTE]
->If you see a "Permission Denied" or "Unidentified Developer" error:
+The app will generate a smaller version of your file (suffixed with _cut) in the same folder.
+
+## Permission Denied
+If you see a "Permission Denied" or "Unidentified Developer" error:
 1. Open System Settings (or System Preferences).
 2. Go to Privacy & Security.
 3. Scroll down to the Security section.
 4. Click Open Anyway next to the app name.
 5. Enter your password to confirm and launch the app.
-
-The app will generate a smaller version of your file (suffixed with _cut) in the same folder.
 
 ---
 
