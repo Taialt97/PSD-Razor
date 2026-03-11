@@ -7,7 +7,7 @@
     <key>CFBundleIconFile</key>
     <string>AppIcon</string>
     <key>CFBundleIdentifier</key>
-    <string>com.example.PSD Razor</string>
+    <string>com.psdrazor.psd-razor</string>
     <key>CFBundleName</key>
     <string>PSD Razor</string>
     <key>CFBundlePackageType</key>

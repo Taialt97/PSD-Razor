@@ -8,6 +8,39 @@ PSD Razor is a native macOS application designed to give a friendly face to the 
 - Automated Permissions: Automatically handles macOS security hurdles (like chmod +x and removing quarantine attributes) so the script runs instantly without "Permission Denied" errors.
 - Real-Time Feedback: Features a built-in console window so you can see the reduction progress and results live.
 - Native Performance: Built with Swift and SwiftUI for a lightweight, responsive experience on Apple Silicon and Intel Macs.
+- Universal Binary: Runs natively on both Intel (x86_64) and Apple Silicon (arm64) Macs — no Rosetta required.
+
+## Getting Started (after cloning)
+
+### Prerequisites
+- macOS 13.0 or later
+- Xcode or Command Line Tools (`xcode-select --install`)
+- [Homebrew](https://brew.sh) (for xcodegen)
+
+### One-command setup
+
+```bash
+./setup.sh
+```
+
+This will:
+1. Install [xcodegen](https://github.com/yonaskolb/XcodeGen) via Homebrew (if not already installed)
+2. Compile the `psd_ockham` C tool from source as a universal binary (arm64 + x86_64)
+3. Generate the Xcode project at `Photoshop Reducer GUI/PSD Razor.xcodeproj`
+
+Then open the project:
+```bash
+open "Photoshop Reducer GUI/PSD Razor.xcodeproj"
+```
+
+### Alternative: build without Xcode
+
+```bash
+cd "Photoshop Reducer GUI"
+bash build_native_app.sh
+```
+
+This produces a standalone `build/PSD Razor.app` you can run directly or move to Applications.
 
 ## How to Use
 

@@ -1,3 +1,15 @@
-
+# Build artifacts
 build/
 CMakeFiles/
+
+# Xcode (generated via xcodegen — re-run ./setup.sh to recreate)
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+DerivedData/
+
+# macOS
+.DS_Store
+
+# Pre-built binary (compiled from source during setup)
+Photoshop Reducer GUI/psd_ockham
